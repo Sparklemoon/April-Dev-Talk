@@ -1,0 +1,171 @@
+:root {
+  --highlight: #141926;
+  --primary: #129fc0;
+  --off-white: #f6f6f6;
+  --sans: "Noto Sans JP", sans-serif;
+  --border-radius: 5px;
+  --shadow: 0 2px 15px 0 rgb(0 0 0 / 9%);
+  --border-radius: 5px;
+}
+
+body {
+  font-family: var(--sans);
+  margin: 0px;
+  background-color: var(--off-white);
+}
+
+.nav {
+  width: 100vw;
+  height: 150px;
+  background-color: var(--highlight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav > .logo {
+  width: 300px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 42px;
+}
+
+.content {
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  width: 1200px;
+  padding: 21px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 42px;
+  margin-bottom: 42px;
+  background-color: var(--off-white);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 1200px;
+}
+
+.price-grid > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: fit-content; 
+  /* fit content  */
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary);
+}
+
+.price-grid > .item > .details {
+  text-align: center;
+  padding: 15px;
+
+}
+
+.price-grid > .item > .details > .title {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.price-grid > .item > .banner img {
+  width: 100%;
+  height: 200px;
+  /* object fit */
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.price-grid > .item > .details > .feature-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.feature,
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-icon > img {
+  width: 18px;
+  height: auto;
+  margin-left: 5px;
+
+}
+
+.price {
+}
+
+.tooltip:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
+  margin-left: 15px;
+  width: 200px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background: black;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.tooltip-left:before {
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  display: block;
+  opacity: 1;
+}
+
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  margin-left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  border-color: transparent black transparent transparent;
+  display: none;
+}
+
+.tooltip-left:after {
+  left:unset;
+  right: 100%;
+  margin-left: unset ;
+  margin-right: ;
+  
+}
+
+@media (max-width: 48em) {
+}
+
+/* .pseudo-demo::before {
+  content: attr(data-secret-stuff);
+
+}
+
+.pseudo-demo::after {
+  content: "......";
+} */
