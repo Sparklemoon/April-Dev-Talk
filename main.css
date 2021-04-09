@@ -105,6 +105,8 @@ body {
 }
 
 .price {
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .tooltip:before {
@@ -125,6 +127,10 @@ body {
 }
 
 .tooltip-left:before {
+  left: unset;
+  right: 100%;
+  margin-right: 15px;
+  margin-left: unset
 }
 
 .tooltip:hover:before,
